@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/* PRISM theme. Dark navy command center by default, light theme available. */
+:root,
+[data-theme="dark"] {
+  --prism-bg: #060d1f;
+  --prism-bg-soft: #0a1730;
+  --prism-panel: #0c1a36;
+  --prism-panel-2: #10224a;
+  --prism-border: #1d335f;
+  --prism-text: #e6f0ff;
+  --prism-muted: #8fa8cc;
+  --prism-cyan: #22d3ee;
+  --prism-emerald: #34d399;
+  --prism-violet: #a78bfa;
+  --prism-orange: #fb923c;
+  --prism-red: #f87171;
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --prism-bg: #eef3fb;
+  --prism-bg-soft: #ffffff;
+  --prism-panel: #ffffff;
+  --prism-panel-2: #e8eef9;
+  --prism-border: #c3d2ea;
+  --prism-text: #0b1c3a;
+  --prism-muted: #4c6488;
+  --prism-cyan: #0891b2;
+  --prism-emerald: #059669;
+  --prism-violet: #7c3aed;
+  --prism-orange: #ea580c;
+  --prism-red: #dc2626;
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--prism-bg);
+  color: var(--prism-text);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+.prism-panel {
+  background: var(--prism-panel);
+  border: 1px solid var(--prism-border);
+  border-radius: 0.75rem;
+}
+
+.prism-btn {
+  background: var(--prism-panel-2);
+  border: 1px solid var(--prism-border);
+  border-radius: 0.5rem;
+  color: var(--prism-text);
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+.prism-btn:hover {
+  border-color: var(--prism-cyan);
+}
+
+.prism-btn-primary {
+  background: var(--prism-cyan);
+  border-color: var(--prism-cyan);
+  color: #04222b;
+  font-weight: 600;
+}
+
+.prism-btn-danger {
+  border-color: var(--prism-red);
+  color: var(--prism-red);
+}
+
+.prism-input,
+.prism-select {
+  background: var(--prism-bg-soft);
+  border: 1px solid var(--prism-border);
+  border-radius: 0.5rem;
+  color: var(--prism-text);
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+.prism-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.prism-scroll::-webkit-scrollbar-thumb {
+  background: var(--prism-border);
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
